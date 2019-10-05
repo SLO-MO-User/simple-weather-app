@@ -19,7 +19,6 @@ function App() {
 
   const getWeather = async e => {
     e.preventDefault();
-    console.log(process.env.REACT_APP_API_KEY);
     try {
       const api_call = await fetch(
         `http://api.openweathermap.org/data/2.5/weather?q=${searchText}&units=metric&lang=tr&appid=${process.env.REACT_APP_API_KEY}`
