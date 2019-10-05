@@ -21,7 +21,7 @@ function App() {
     e.preventDefault();
     try {
       const api_call = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${searchText}&units=metric&lang=tr&appid=${process.env.REACT_APP_API_KEY}`
+        `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${searchText}&units=metric&lang=tr&appid=${process.env.REACT_APP_API_KEY}`
       );
       const data = await api_call.json();
       console.log(data);
